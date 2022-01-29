@@ -57,16 +57,9 @@ async function run() {
         })
 
 
-        // app.get('/orders', verifyToken, async (req, res) => {
-        //     const email = req.query.email;
-        //     const query = { email: email };
-        //     console.log(query);
-        //     const cursor = ordersCollection.find(query);
-        //     const orders = await cursor.toArray();
-        //     res.json(orders);
-        // })
 
-        app.get('/orders', async (req, res) => {
+
+        app.get('/orders', verifyToken, async (req, res) => {
             const email = req.query.email;
             const query = { email: email }
             console.log(query);
