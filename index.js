@@ -8,7 +8,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const { config } = require('dotenv');
 
-const port = process.env.port || 5000;
+const port = process.env.PORT || 8000;
 
 const serviceAccount = require('./harrier-8decd-firebase-adminsdk.json');
 
