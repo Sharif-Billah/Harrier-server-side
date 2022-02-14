@@ -109,7 +109,6 @@ async function run() {
 
         app.post('/orders', async (req, res) => {
             const order = req.body;
-            console.log(order);
             const result = await ordersCollection.insertOne(order)
             res.json({ result })
         });
